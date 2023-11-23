@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configurações de conexão com o PostgreSQL -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/poo2</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">admin</property>
+
+        <!-- Dialeto específico do PostgreSQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Outras configurações -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Mapeamento das classes de modelo -->
+        <!-- Adicione aqui os seus mapeamentos de classes de modelo -->
+
+        <!-- Mapeamento das classes de modelo -->
+        <mapping class="com.Trabalho_Poo2.model.ExperienciaViagem"/>
+        <mapping class="com.Trabalho_Poo2.model.Midia"/>
+        <!-- Adicione aqui outros mapeamentos das suas classes de modelo, se houver -->
+
+    </session-factory>
+</hibernate-configuration>
